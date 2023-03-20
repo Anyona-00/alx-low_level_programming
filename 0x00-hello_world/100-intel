@@ -1,11 +1,5 @@
 #!/bin/bash
 
-CFILE=$1
-
-
-ASMFILE=${CFILE%.c}.s
-
 gcc -S -masm=intel $CFILE -o $ASMFILE
 
-echo "Generated assembly code saved in $ASMFILE"
 
